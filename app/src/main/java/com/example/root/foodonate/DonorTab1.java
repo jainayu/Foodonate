@@ -18,7 +18,6 @@ public class DonorTab1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.donor, container, false);
-        TextView nos = (TextView)
         FirebaseDatabase database = FirebaseDatabase.getInstance("donor");
         DatabaseReference myRef = database.getReference();
         ValueEventListener pl = new ValueEventListener() {

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "955980695650",
+    "firebase_url": "https://foodonate-40763.firebaseio.com",
+    "project_id": "foodonate-40763",
+    "storage_bucket": "foodonate-40763.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955980695650:android:016f6e8fe7e280da",
+        "android_client_info": {
+          "package_name": "com.example.root.foodonate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955980695650-qoj77ueai01jaokti1jqh6fv9p86hfqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpjHKEPCXBvl1PoEfTAgER757SX_MLSvI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
