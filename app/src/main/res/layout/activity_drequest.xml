@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,9 +18,7 @@
             android:id="@+id/fooditem"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/relative_1"
             android:layout_alignParentLeft="true"
-
             android:layout_alignParentTop="true"
 
             android:orientation="vertical">
@@ -56,7 +55,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/relative_1"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@+id/fooditem"
@@ -100,12 +98,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-    <Button
-        android:id="@+id/button2"
-        android:layout_marginLeft="30dp"
-        android:layout_width="49dp"
-        android:layout_height="wrap_content"
-        android:text="+" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_marginLeft="30dp"
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
+            android:text="+" />
 
         <TextView
             android:id="@+id/textView2"
@@ -167,7 +165,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

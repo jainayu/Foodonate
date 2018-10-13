@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Foodonate</string>
+    <string name="app_name">Charite</string>
     <string name="tab_text_1">Donor</string>
-    <string name="tab_text_2">Donee</string>
+    <string name="tab_text_2">Acceptor</string>
     <string name="tab_text_3">Emergencies</string>
     <string name="action_settings">Settings</string>
 </resources>

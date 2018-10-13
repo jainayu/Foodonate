@@ -9,7 +9,7 @@ public class AcceptorTab2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.acceptor, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_acceptor, container, false);
         return rootView;
     }
 }
