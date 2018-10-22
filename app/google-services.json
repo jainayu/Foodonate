@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "955980695650-4t9kj9jsv3u0j0lrgm04kjhtdb3the9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.root.foodonate",
+            "certificate_hash": "e2ffe18e4e260fc7427c1fa0d685f92aca6de521"
+          }
+        },
+        {
           "client_id": "955980695650-qoj77ueai01jaokti1jqh6fv9p86hfqu.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955980695650-qoj77ueai01jaokti1jqh6fv9p86hfqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

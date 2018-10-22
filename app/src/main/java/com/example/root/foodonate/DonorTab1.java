@@ -9,25 +9,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.List;
 
 public class DonorTab1 extends Fragment {
 
-    RecyclerView drv;
+    RecyclerView donorRecyclerView;
     View rootView;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myref = database.getReference("Donor");
 
     @Override
     public View onCreateView( @NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_donor, container, false);
-        drv = (RecyclerView) rootView.findViewById(R.id.drv);
-        drv.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        donorRecyclerView = (RecyclerView) rootView.findViewById(R.id.drv);
+        donorRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
 
-        DonorList dList = DonorList.get(getActivity());
+        DonorList dList = DonorList.get(getActivity(), myref);
         List<DonorItem> dItems = dList.getDItems();
         MyAdaptor adaptor = new MyAdaptor(dItems);
-        drv.setAdapter(adaptor);
+        donorRecyclerView.setAdapter(adaptor);
 
         return rootView;
     }
@@ -35,6 +40,7 @@ public class DonorTab1 extends Fragment {
    
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+
         public TextView Dnos;
         public TextView Dloc;
         public DonorItem DItem;
