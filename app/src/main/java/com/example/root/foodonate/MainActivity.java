@@ -16,6 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -36,11 +38,23 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    // For using firebase authentication
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mAuth = FirebaseAuth.getInstance();
+
+        // Firebase user variable
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        // If currentUser is null(that is not logged in) go to SignInActivity
+        if(currentUser == null){
+            startActivity(new Intent(MainActivity.this, SignInActivity.class));
+        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

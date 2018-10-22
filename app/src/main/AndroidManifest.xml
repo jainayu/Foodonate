@@ -19,10 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Drequest"
-            android:label="Donor's Request">
-
-        </activity>
+        <activity
+            android:name=".Drequest"
+            android:label="Donor&apos;s Request" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".NewAccountActivity" />
+        <activity android:name=".ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>
