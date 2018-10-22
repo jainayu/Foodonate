@@ -32,11 +32,11 @@ public class DonorItem {
         this.Dnos = dnos;
     }
 
-    public DonorItem(String dlocation, String dname, String dnos ) {
+    /*public DonorItem(String dlocation, String dname, String dnos ) {
         this.Dname = dname;
         this.Dlocation = dlocation;
         this.Dnos = dnos;
-    }
+    }*/
 
 
 

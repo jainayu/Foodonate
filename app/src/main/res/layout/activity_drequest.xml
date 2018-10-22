@@ -7,28 +7,24 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/relative_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/personaldetails"
-        android:layout_alignParentTop="true"
-        >
+        android:layout_alignParentTop="true">
 
         <LinearLayout
-            android:id="@+id/fooditem"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/fitextview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Food items"
                 android:layout_gravity="center"
+                android:text="Food items"
                 android:textSize="25sp" />
 
             <EditText
@@ -62,11 +58,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/stextview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Servings"
                 android:layout_gravity="center"
+                android:text="Servings"
                 android:textSize="25sp" />
 
             <EditText
@@ -98,21 +94,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
+
         <Button
-            android:id="@+id/button2"
-            android:layout_marginLeft="30dp"
+            android:id="@+id/addbutton"
             android:layout_width="49dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
             android:text="+" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/amtextview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:textSize="20sp"
-            android:text="Add More" />
+            android:layout_weight="1"
+            android:text="Add More"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -127,7 +124,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/pnTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone No"
@@ -150,11 +147,11 @@
 
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/lTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:text="Location" />
+            android:text="Location"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/editText5"
