@@ -1,46 +1,39 @@
 package com.example.root.foodonate;
 
+import android.net.http.SslCertificate;
 import android.view.View;
 
 public class DonorItem {
-    String Dname;
-    String Dlocation;
-    String Dnos;
-
-
-
-    public String getDname() {
-        return Dname;
-    }
-
-    public void setDname(String dname) {
-        this.Dname = dname;
-    }
+    String dlocation;
+    String dname;
+    String dnos;
 
     public String getDlocation() {
-        return Dlocation;
+        return dlocation;
     }
 
     public void setDlocation(String dlocation) {
-        this.Dlocation = dlocation;
+        this.dlocation = dlocation;
+    }
+
+    public String getDname() {
+        return dname;
+    }
+
+    public void setDname(String dname) {
+        this.dname = dname;
     }
 
     public String getDnos() {
-        return Dnos;
+        return dnos;
     }
+
     public void setDnos(String dnos) {
-        this.Dnos = dnos;
+        this.dnos = dnos;
     }
 
-    /*public DonorItem(String dlocation, String dname, String dnos ) {
-        this.Dname = dname;
-        this.Dlocation = dlocation;
-        this.Dnos = dnos;
+   /* @Override
+    public String toString() {
+        return dlocation+" "+dnos+" "+dname;
     }*/
-
-
-
-
-
-
 }

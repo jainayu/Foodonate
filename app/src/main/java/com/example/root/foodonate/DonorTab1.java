@@ -9,9 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DonorTab1 extends Fragment {
@@ -20,7 +24,7 @@ public class DonorTab1 extends Fragment {
     View rootView;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myref = database.getReference("Donor");
-
+    private List<DonorItem> DItems= new ArrayList<>();
     @Override
     public View onCreateView( @NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,10 +33,28 @@ public class DonorTab1 extends Fragment {
         donorRecyclerView = (RecyclerView) rootView.findViewById(R.id.drv);
         donorRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
 
-        DonorList dList = DonorList.get(getActivity(), myref);
-        List<DonorItem> dItems = dList.getDItems();
-        MyAdaptor adaptor = new MyAdaptor(dItems);
-        donorRecyclerView.setAdapter(adaptor);
+
+        myref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot child : dataSnapshot.getChildren())
+                {
+                    DonorItem newItem = child.getValue(DonorItem.class);
+                    DItems.add(newItem);
+/*
+                    System.out.println("data : "+newItem);
+*/
+                    MyAdaptor adaptor = new MyAdaptor(DItems);
+                    donorRecyclerView.setAdapter(adaptor);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         return rootView;
     }
@@ -79,7 +101,6 @@ public class DonorTab1 extends Fragment {
 
             DonorItem dItem = DItem.get(position);
             holder.bind(dItem);
-
         }
 
 
